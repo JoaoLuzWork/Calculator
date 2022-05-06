@@ -115,16 +115,16 @@ function subtract() {
         }
         subCond = 1;
     }   else if(subCond != 1){
-        if(numbers.length <= 0){
+            if(numbers.length <= 0){
 
-            numbers += "-"
-        }
-        subCond = 1;
-        } else if(subCond = 1){
-            operation = "-";
-            result[0] = numbers;
-            numbers = "";
-        }
+                numbers += "-"
+            }
+            subCond = 1;
+            } else if(subCond = 1){
+                operation = "-";
+                result[0] = numbers;
+                numbers = "";
+            }
     
     conditional = 0;
     m = 0;
