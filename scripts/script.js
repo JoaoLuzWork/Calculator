@@ -16,7 +16,7 @@ function equals() {
         
         conditional = 1;
     }
-
+    
     if(numbers=="0."){
     }else if(operation == "+"){
 
@@ -64,7 +64,7 @@ function equals() {
             d = 1;
 
         } else if(d == 1){
-            if(numbers.length <= 8){
+            if(numbers.length <= 8 && numbers.length >= -8){
 
                     result[1] /= parseFloat(result[0]);
                     numbers = result[1];
@@ -82,10 +82,10 @@ function equals() {
             mult = 1;
 
         }   else if(mult == 1){
-                
+            if(numbers.length <= 8 && numbers.length >= -8){    
                 result[1] *= parseFloat(result[0]);
                 numbers = result[1];
-
+            }
         }
     }else{
         numbers = resul[0];
