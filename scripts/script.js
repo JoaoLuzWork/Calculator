@@ -132,6 +132,7 @@ function subtract() {
 
 }
 
+// terminar aplicação da divisão
 function divide() {
 
     operation = "/";
@@ -141,7 +142,7 @@ function divide() {
     conditional = 0;
     document.getElementById("receiver").innerHTML = numbers;
 }
-
+// terminar aplicação de multiplicação
 function multiplication() {
 
     operation = "*";
@@ -636,7 +637,7 @@ function num0() {
 
     if(numbers == "0."){
         if(numbers == ""){
-                
+     
             numbers = "0";
 
         }   else {
