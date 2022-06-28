@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 html {
     max-width: 1440px;
     max-height: 900px;
@@ -23,6 +25,7 @@ input {
     text-align: right;
     padding: 15px;
     padding-right: 25px;
+    font-family: 'Oswald', sans-serif;
     font-size: 100px;
     vertical-align: middle;
     color: #fff;
