@@ -1,82 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-html {
-    max-width: 1440px;
-    max-height: 900px;
-    min-width: 200px;
-    min-height: 500px;
-    background-color: hsl(222, 26%, 31%);
+:root
+{
+    /* BackGrounds */
+    --background: hsl(222, 26%, 31%);
+    --result_back:  hsl(223, 31%, 20%);
+    --numbers_back: hsl(224, 36%, 15%);
+    
+    
+    /* Text */
+    --General_font: hsl(0, 0%, 100%);
 }
 
-body {
-    position: relative;
-    margin-top: 5%;
-    margin-left: 30%;
+html 
+{
+    overflow-x: hidden;
 }
 
-input {
+body 
+{
+    overflow-x: hidden;
+    background-color: var(--background);
+}
+
+input 
+{
     background-color: rgba(0, 0, 0, 0);
     border: 0ch;
 }
 
-.text {
+.container
+{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 30%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.box_change
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button_change
+{
     position: relative;
-    margin: 0%;
-    text-align: right;
-    padding: 15px;
-    padding-right: 25px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 100px;
-    vertical-align: middle;
-    color: #fff;
-}
-
-.container {
-    position: absolute;
-    text-align: center;
-    width: 525px;
-    height: 700px;
-}
-
-.container-1 {
-    height: 69%;
-    margin-top: 47%;
-    background-color: hsl(223, 31%, 20%);
+    width: 60px;
+    height: 20px;
+    background-color: var(--result_back);
     border-radius: 10px;
 }
 
-.header {
-    position: absolute;
-    text-align: justify;
-    font-size: 40px;
-    font-family: serif;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 7%;
-    color: #fff;
+.change_swith
+{
+    display: flex;
+    flex-direction: column;
 }
 
-.header-1 {
-    position: absolute;
-    top: 10%;
-    width: 100%;
-    height: 150px;
-    border-radius: 10px;
-    background-color: hsl(224, 36%, 15%)
+.box_change div p
+{
+    margin-bottom: 5px;
+    margin-top: 0px;
 }
 
-.grid {
-    display: grid;
-    padding: 4%;
-    grid-column-gap: 5%;
-    grid-row-gap: 30px;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 60px 60px 60px 60px;
-    border-radius: 10px;
+.text_change
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.button {
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--General_font);
+}
+
+
+.button 
+{
     display: inline-block;
     font-size: 60px;
     background-color: hsl(30, 25%, 89%);
@@ -89,13 +96,15 @@ input {
     box-shadow: 0px 5px 0px hsl(27, 6%, 65%);
 }
 
-.button:active {
+.button:active 
+{
     background-color: hsl(30, 25%, 89%);
     box-shadow: 0 0px;
     transform: translateY(5px);
 }
 
-.button-1 {
+.button-1 
+{
     display: inline-block;
     background-color: hsl(225, 21%, 49%);
     box-shadow: 0px 5px 0px hsl(224, 28%, 35%);
@@ -104,13 +113,15 @@ input {
     color: #fff;
 }
 
-.button-1:active {
+.button-1:active 
+{
     background-color: hsl(225, 21%, 49%);
     box-shadow: 0 0px;
     transform: translateY(5px);
 }
 
-.grid .large_grid {
+.grid .large_grid 
+{
     display: grid;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -118,7 +129,8 @@ input {
     grid-template-rows: 85px;
 }
 
-.large_grid .large_grid-1 {
+.large_grid .large_grid-1 
+{
     font-size: 60px;
     border-radius: 10px;
     width: 234px;
@@ -126,7 +138,8 @@ input {
     color: #fff;
 }
 
-.button-red {
+.button-red 
+{
     background-color: hsl(6, 63%, 50%);
     box-shadow: 0px 5px 0px hsl(6, 70%, 34%);
 }

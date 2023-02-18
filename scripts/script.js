@@ -11,12 +11,7 @@ var subCond = 0;
 
 // alert (eval("4+2-5"));
 function equals() {
-    
-    if (conditional == 0) {
-        
-        conditional = 1;
-    }
-    
+   
     if(numbers=="0."){
     }else if(operation == "+"){
 
@@ -91,6 +86,12 @@ function equals() {
         numbers = resul[0];
     }
 
+     
+    if (conditional == 0) {
+        
+        conditional = 1;
+    }
+    
     document.getElementById("receiver").innerHTML = numbers;
     numbers = numbers.toString();
 }
