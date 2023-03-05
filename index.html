@@ -6,8 +6,6 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/styles/style.css">
-
-  <script src="/scripts/script.js"> </script>
   
   <title>Frontend Mentor | Calculator app</title>
 
@@ -15,7 +13,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <h1>Clac</h1>
+      <h1>calc</h1>
       <div class="box_change">
         <h3>Theme</h3>
         <div class="change_swith">
@@ -24,15 +22,41 @@
             <p>2</p>
             <p>3</p>
           </div>
-          <div class="button_change"></div>
+          <div class="button_change">
+            <button id="switch1" onclick="move1()"></button>
+            <button style="visibility: hidden;" id="switch2" onclick="move2()"></button>
+            <button style="visibility: hidden;" id="switch3" onclick="move3()"></button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="box_result">aa</div>
+    <div class="box_result"><p type="text" id="receiver"></p></div>
     <div class="box_numbers">
-      <div class="mid_button"></div>
-      <div class="large_button"></div>
+      <div class="mid_buttons">
+        <button onclick="num7()" id="7" class="button">7</button>
+        <button onclick="num8()" id="8" class="button">8</button>
+        <button onclick="num9()" id="9" class="button">9</button>
+        <button onclick="del()" id="del" class="button button-1">Del</button>
+        <button onclick="num4()" id="4" class="button">4</button>
+        <button onclick="num5()" id="5" class="button">5</button>
+        <button onclick="num6()" id="6" class="button">6</button>
+        <button onclick="plus()" id="+" class="button">+</button>
+        <button onclick="num1()" id="1" class="button">1</button>
+        <button onclick="num2()" id="2" class="button">2</button>
+        <button onclick="num3()" id="3" class="button">3</button>
+        <button onclick="subtract()" id="-" class="button">-</button>
+        <button onclick="dot()" id="." class="button">.</button>
+        <button onclick="num0()" id="0" class="button">0</button>
+        <button onclick="divide()" id="/" class="button">/</button>
+        <button onclick="multiplication()" id="x" class="button">x</button>
+        <div class="large_buttons">
+          <button onclick="reset()" id="reset" class="button-1">Reset</button>
+          <button onclick="equals()" id="=" class="button-red">=</button>
+        </div>
+      </div>
+      
     </div>
   </div>
 </body>
+<script src="/scripts/script.js"> </script>
 </html>

@@ -1,3 +1,6 @@
+const BSwitch1 = document.getElementById('switch1');
+const BSwitch2 = document.getElementById('switch2');
+const BSwitch3 = document.getElementById('switch3');
 var numbers = "";
 var result = ["",""];
 var operation = "";
@@ -7,7 +10,65 @@ var d = 0;
 var mult = 0;
 var conditional = 0;
 var subCond = 0;
+var pos = 0;
+let posF = 40;
+let cond = 0;
 
+function Bar() 
+{ 
+    if (cond == 0) 
+    {
+        document.getElementById('navIcon').src='./img/cross.svg';
+        document.getElementById('bar').style=' ';
+        cond++;
+    }else {
+        document.getElementById('navIcon').src='./img/NavBar.svg';
+        document.getElementById('bar').style='visibility: hidden;';
+        cond--;
+    }
+};
+
+function move1() {
+        if (pos <= 19) {
+            pos = 19; 
+            BSwitch1.style.left = pos + "px";
+        } 
+        if(pos == 19)
+        {
+            BSwitch1.style='visibility: hidden; trasformX: 1000px';
+            BSwitch2.style='visibility: visible;';
+        }
+}
+
+function move2() {
+   
+        if (pos >= 19 && pos <=39) {
+            pos = 39; 
+            BSwitch2.style.left = pos + "px";
+        } 
+        if(pos == 39)
+        {
+            BSwitch2.style='visibility: hidden; trasformX: 1000px';
+            BSwitch3.style='visibility: visible;';
+        }
+   
+}
+
+function move3() {
+    
+        if (pos!= 0) {
+            pos = 0;
+            BSwitch3.style.left = pos + "px";
+        } 
+        if(pos == 0)
+        {
+            BSwitch3.style='visibility: hidden; trasformX: 1000px;';
+            BSwitch1.style='visibility: visible; trasformX: 0px;';
+            BSwitch2.style='visibility: hidden; left: 20px';
+            pos = 0;
+        }
+    
+}
 
 // alert (eval("4+2-5"));
 function equals() {

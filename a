@@ -18,22 +18,22 @@
     <div class="header-1"><p type="text" id="receiver" class="text"></p></div>
     <div class="container-1">
       <div class="grid">
-        <button type="button" onclick="num7()" id="7" class="button">7</button>
-        <button type="button" onclick="num8()" id="8" class="button">8</button>
-        <button type="button" onclick="num9()" id="9" class="button">9</button>
-        <button type="button" onclick="del()" id="del" class="button button-1">Del</button>
-        <button type="button" onclick="num4()" id="4" class="button">4</button>
-        <button type="button" onclick="num5()" id="5" class="button">5</button>
-        <button type="button" onclick="num6()" id="6" class="button">6</button>
-        <button type="button" onclick="plus()" id="+" class="button">+</button>
-        <button type="button" onclick="num1()" id="1" class="button">1</button>
-        <button type="button" onclick="num2()" id="2" class="button">2</button>
-        <button type="button" onclick="num3()" id="3" class="button">3</button>
-        <button type="button" onclick="subtract()" id="-" class="button">-</button>
-        <button type="button" onclick="dot()" id="." class="button">.</button>
-        <button type="button" onclick="num0()" id="0" class="button">0</button>
-        <button type="button" onclick="divide()" id="/" class="button">/</button>
-        <button type="button" onclick="multiplication()" id="x" class="button">x</button>
+        <button onclick="num7()" id="7" class="button">7</button>
+        <button onclick="num8()" id="8" class="button">8</button>
+        <button onclick="num9()" id="9" class="button">9</button>
+        <button onclick="del()" id="del" class="button button-1">Del</button>
+        <button onclick="num4()" id="4" class="button">4</button>
+        <button onclick="num5()" id="5" class="button">5</button>
+        <button onclick="num6()" id="6" class="button">6</button>
+        <button onclick="plus()" id="+" class="button">+</button>
+        <button onclick="num1()" id="1" class="button">1</button>
+        <button onclick="num2()" id="2" class="button">2</button>
+        <button onclick="num3()" id="3" class="button">3</button>
+        <button onclick="subtract()" id="-" class="button">-</button>
+        <button onclick="dot()" id="." class="button">.</button>
+        <button onclick="num0()" id="0" class="button">0</button>
+        <button onclick="divide()" id="/" class="button">/</button>
+        <button onclick="multiplication()" id="x" class="button">x</button>
         <div class="large_grid">
           <button type="button" onclick="reset()" id="reset" class="large_grid-1 button-1">Reset</button>
           <button type="button" onclick="equals()" id="=" class="large_grid-1 button button-red">=</button>
