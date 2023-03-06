@@ -1,15 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Warp&display=swap');
-
 :root
 {
-    /* BackGrounds */
-    --background: hsl(222, 26%, 31%);
-    --result_back: hsl(224, 36%, 15%);
-    --numbers_back: hsl(223, 31%, 20%);
+    /* Tema Azul */
+    --Bbackground: hsl(222, 26%, 31%);
+    --Bnumbers_back: hsl(223, 31%, 20%);
+    --Bresult_back: hsl(224, 36%, 15%);
+
+    --Bkey_background1:  hsl(225, 21%, 49%);
+    --Bkey_shadow1: hsl(224, 28%, 35%);
+
+    --Bkey_background2: hsl(6, 63%, 50%);
+    --Bkey_shadow2: hsl(6, 70%, 34%);
+
+    --Bkey_background3: hsl(30, 25%, 89%);
+    --Bkey_shadow3: hsl(28, 16%, 65%);
+
+    --BfontNum: hsl(221, 14%, 31%);
+    --BfontIgual: hsl(0, 0%, 100%);
+    --BfontRD: hsl(0, 0%, 100%);
+    --BfontHR: hsl(0, 0%, 100%);
+    
+
+    /* Tema Claro */
+    --Wbackground: hsl(0, 0%, 90%);
+    --Wnumbers_back: hsl(0, 5%, 81%);
+    --Wresult_back: hsl(0, 0%, 93%);
+
+    --Wkey_background1:   hsl(185, 42%, 37%);
+    --Wkey_shadow1: hsl(185, 58%, 25%);
+
+    --Wkey_background2: hsl(25, 98%, 40%);
+    --Wkey_shadow2: hsl(25, 99%, 27%);
+
+    --Wkey_background3: hsl(45, 7%, 89%);
+    --Wkey_shadow3: hsl(35, 11%, 61%);
+
+    --WfontNum:  hsl(60, 10%, 19%);
+    --WfontIgual: hsl(0, 0%, 100%);
+    --WfontRD: hsl(0, 0%, 100%);
+    --WfontHR: hsl(60, 10%, 19%);
+    
+
+    /* Tema Roxo */
+
+    --Pbackground: hsl(268, 75%, 9%);
+    --Pnumbers_back: hsl(268, 71%, 12%);
+    --Presult_back:  hsl(268, 71%, 12%);
+
+    --Pkey_background1:  hsl(281, 89%, 26%);
+    --Pkey_shadow1: hsl(285, 91%, 52%);
+
+    --Pkey_background2: hsl(176, 100%, 44%);
+    --Pkey_shadow2: hsl(177, 92%, 70%);
+
+    --Pkey_background3: hsl(268, 47%, 21%);
+    --Pkey_shadow3: hsl(290, 70%, 36%);
+    
+    --PfontNum: hsl(52, 100%, 62%);
+    --PfontIgual: hsl(198, 20%, 13%);
+    --PfontRD: hsl(0, 0%, 100%);
+    --PfontHR: hsl(52, 100%, 62%);
     
     
-    /* Text */
-    --General_font: hsl(0, 0%, 100%);
 }
 
 html 
@@ -24,16 +76,84 @@ body
     background-color: var(--background);
 }
 
+.theme-1 
+{ /* Tema Azul */
+	--background:var(--Bbackground);    
+    --numbers_back:var(--Bnumbers_back);
+    --result_back:var(--Bresult_back);
+
+    --key_background1:var(--Bkey_background1);;
+    --key_shadow1:var(--Bkey_shadow1);
+
+    --key_background2:var(--Bkey_background2);;
+    --key_shadow2:var(--Bkey_shadow2);
+
+    --key_background3:var(--Bkey_background3);
+    --key_shadow3:var(--Bkey_shadow3);
+    
+    --fontNum:var(--BfontNum);
+    --fontIgual:var(--BfontIgual);
+    --fontRD:var(--BfontRD);
+    --fontHR:var(--BfontHR);
+    
+}
+
+.theme-2
+{ /* Tema claro */
+	--background:var(--Wbackground);    
+    --numbers_back:var(--Wnumbers_back);
+    --result_back:var(--Wresult_back);
+
+    --key_background1:var(--Wkey_background1);;
+    --key_shadow1:var(--Wkey_shadow1);
+
+    --key_background2:var(--Wkey_background2);;
+    --key_shadow2:var(--Wkey_shadow2);
+
+    --key_background3:var(--Wkey_background3);
+    --key_shadow3:var(--Wkey_shadow3);
+    
+    --fontNum:var(--WfontNum);
+    --fontIgual:var(--WfontIgual);
+    --fontRD:var(--WfontRD);
+    --fontHR:var(--WfontHR);
+    
+}
+
+.theme-3
+{ /* Tema Roxo */
+	--background:var(--Pbackground);    
+    --numbers_back:var(--Pnumbers_back);
+    --result_back:var(--Presult_back);
+
+    --key_background1:var(--Pkey_background1);;
+    --key_shadow1:var(--Pkey_shadow1);
+
+    --key_background2:var(--Pkey_background2);;
+    --key_shadow2:var(--Pkey_shadow2);
+
+    --key_background3:var(--Pkey_background3);
+    --key_shadow3:var(--Pkey_shadow3);
+
+    --fontNum:var(--PfontNum);
+    --fontIgual:var(--PfontIgual);
+    --fontRD:var(--PfontRD);
+    --fontHR:var(--PfontHR);
+    
+}
+
+/* conteiner principal */
 .container
 {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 40%;
     margin-top: 5%;
     margin-left: 30%;
     border-radius: 20px;
 }
 
+/* caixinha do switch */
 .box_change
 {
     display: flex;
@@ -44,35 +164,51 @@ body
 .button_change
 {
     position: relative;
-    width: 60px;
-    margin: none;
-    height: 20px;
-    background-color: var(--result_back);
-    border-radius: 10px;
+	background-color: var(--numbers_back);
+	display: flex;
+    height: 25px;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 500px;
 }
 
-#switch1, #switch2, #switch3
+.switch
 {
-    position: absolute;
-    background-color:hsl(6, 63%, 50%) ;
-    width: 13px;
-    height: 13px;
-    margin: 5%;
-    border-radius: 10px;
-    border: none;
-    z-index: 3;
+    box-sizing: border-box;
+    appearance: none;
+  /*   background: white;
+     outline: 1px solid #333;
+    border: 1px solid white; */
+    width: 15px;
+    height: 15px;
+    margin: 7px 3.5px 7px 3.5px;
+    transform: scale(1.5);
 }
 
-#switch2
+/* config do span */
+.ativo 
 {
-    left: 20px;
-    z-index: 2;
+	height: 20px;
+	width: 20px;
+	background-color: var(--Bkey_background2);
+	border-radius: 50%;
+	position: absolute;
+	top:2px;
+	margin-left: 2px;
+	transition: left 0.2s;
 }
 
-#switch3
+.switch:nth-child(1):checked ~ .ativo
 {
-    left: 40px;
-    z-index: 1;
+	left: 1px;
+}
+.switch:nth-child(2):checked ~ .ativo
+{
+	left: 20px;
+}
+.switch:nth-child(3):checked ~ .ativo
+{
+	left: 40px;
 }
 
 .change_swith
@@ -80,6 +216,7 @@ body
     display: flex;
     flex-direction: column;
 }
+
 .box_change h3
 {
     position: relative;
@@ -101,6 +238,7 @@ body
     margin-right: 10%;
 }
 
+/* caixa onde aprece os resultados e números em geral */
 .box_result
 {
     width: 100%;
@@ -108,19 +246,21 @@ body
     background-color: var(--result_back);
     border-radius: 10px;
     margin: 0%;
-    color: var(--General_font);
+    color: var(--fontHR);
     font-size: clamp(1rem, 5vw, 4rem);;
 }
 
 #receiver
 {
    position: relative;
-   right: 0px;
-   top: 0%;
+   top: 20%;
+   right: 5%;
    margin: 0px;
+   text-align: right;
 }
 
-.mid_buttons
+/* caixa dos botões dos números */
+.box_numbers
 {
     display: flex;
     padding: 5%;
@@ -128,7 +268,7 @@ body
     flex-wrap: wrap;
     background-color: var(--numbers_back);
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 5%;
     gap: 20px;
 }
 
@@ -145,27 +285,28 @@ body
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--General_font);
+    color: var(--fontHR);
 }
 
 
 .button 
 {
     display: inline-block;
-    font-size: 60px;
-    background-color: hsl(30, 25%, 89%);
-    color: hsl(224, 36%, 15%);
-    height: 70px;
+    font-size: 40px;
+    font-family: 'Tilt Warp', cursive;
+    background-color: var(--key_background3);
+    color: var(--fontNum);
+    height: 65px;
     width: 20%;
     border:none;
     vertical-align: middle;
     border-radius: 10px;
-    box-shadow: 0px 5px 0px hsl(27, 6%, 65%);
+    box-shadow: 0px 5px 0px var(--key_shadow3);
 }
 
 .button:active 
 {
-    background-color: hsl(30, 25%, 89%);
+    background-color: var(--key_background3);
     box-shadow: 0 0px;
     transform: translateY(5px);
 }
@@ -173,24 +314,26 @@ body
 .button-1 
 {
     display: inline-block;
-    background-color: hsl(225, 21%, 49%);
-    box-shadow: 0px 5px 0px hsl(224, 28%, 35%);
+    background-color: var(--key_background1);
+    box-shadow: 0px 5px 0px var(--key_shadow1);
     border: 0ch;
     vertical-align: middle;
-    color: #fff;
+    color: var(--fontRD);
+    font-family: 'Tilt Warp', cursive;
 }
 
 .button-1:active 
 {
-    background-color: hsl(225, 21%, 49%);
+    background-color: var(--key_background1);
     box-shadow: 0 0px;
     transform: translateY(5px);
 }
 
 .button-red 
 {
-    background-color: hsl(6, 63%, 50%);
-    box-shadow: 0px 5px 0px hsl(6, 70%, 34%);
+    background-color: var(--key_background2);
+    box-shadow: 0px 5px 0px var(--key_shadow2);
+    color: var(--fontIgual);
     border: none;
 }
 
@@ -203,7 +346,7 @@ body
 }
 
 .button-red:active {
-    background-color: hsl(6, 63%, 50%);
+    background-color: var(--key_background2);
     box-shadow: 0 0px;
     transform: translateY(5px);
 }

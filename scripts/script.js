@@ -1,32 +1,55 @@
 const BSwitch1 = document.getElementById('switch1');
 const BSwitch2 = document.getElementById('switch2');
 const BSwitch3 = document.getElementById('switch3');
-var numbers = "";
-var result = ["",""];
-var operation = "";
-var p = 0;
-var m = 0;
-var d = 0;
-var mult = 0;
-var conditional = 0;
-var subCond = 0;
-var pos = 0;
+const radiosEl = document.querySelectorAll('.switch');
+const inputEl = document.getElementById('input');
+const body = document.querySelector('body');
+
+let numbers = "";
+let result = ["",""];
+let operation = "";
+let p = 0;
+let m = 0;
+let d = 0;
+let mult = 0;
+let conditional = 0;
+let subCond = 0;
+let pos = 0;
 let posF = 40;
 let cond = 0;
 
-function Bar() 
-{ 
-    if (cond == 0) 
-    {
-        document.getElementById('navIcon').src='./img/cross.svg';
-        document.getElementById('bar').style=' ';
-        cond++;
-    }else {
-        document.getElementById('navIcon').src='./img/NavBar.svg';
-        document.getElementById('bar').style='visibility: hidden;';
-        cond--;
-    }
-};
+/* QUANDO UM RADIO É CLICADO A FUNCAO PASSAR POR TODOS PROCURANDO O CHECADO E SETA A CLASSE CORRESPONDENTE */
+function changeTheme() {
+	radiosEl.forEach(el => {
+		if (el.checked) {
+			switch(el.getAttribute('value')){
+				case 'tema1':
+					body.classList.remove('theme-2', 'theme-3')
+					body.classList.add('theme-1');
+					break;
+				case 'tema2':
+					body.classList.remove('theme-1', 'theme-3')
+					body.classList.add('theme-2');
+					break;
+				case 'tema3':
+					body.classList.remove('theme-1', 'theme-2')
+					body.classList.add('theme-3');
+					break;			
+			}
+		}
+	})
+}
+
+/* ADICIONA FUNCAO PARA OS INPUTS */
+radiosEl.forEach(el => {
+	el.addEventListener('click', changeTheme);
+})
+
+/* SETA TEMA INICIAL */
+window.addEventListener("load", function() {
+	radiosEl[0].setAttribute("checked", "checked");
+	changeTheme();
+} );
 
 function move1() {
         if (pos <= 19) {
