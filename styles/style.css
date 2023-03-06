@@ -49,10 +49,10 @@
 
     --Pkey_background1:  hsl(281, 89%, 26%);
     --Pkey_shadow1: hsl(285, 91%, 52%);
-
+    
     --Pkey_background2: hsl(176, 100%, 44%);
     --Pkey_shadow2: hsl(177, 92%, 70%);
-
+    
     --Pkey_background3: hsl(268, 47%, 21%);
     --Pkey_shadow3: hsl(290, 70%, 36%);
     
@@ -190,7 +190,7 @@ body
 {
 	height: 20px;
 	width: 20px;
-	background-color: var(--Bkey_background2);
+	background-color: var(--key_background2);
 	border-radius: 50%;
 	position: absolute;
 	top:2px;
