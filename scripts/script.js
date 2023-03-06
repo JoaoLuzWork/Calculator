@@ -1,6 +1,3 @@
-const BSwitch1 = document.getElementById('switch1');
-const BSwitch2 = document.getElementById('switch2');
-const BSwitch3 = document.getElementById('switch3');
 const radiosEl = document.querySelectorAll('.switch');
 const inputEl = document.getElementById('input');
 const body = document.querySelector('body');
@@ -17,6 +14,7 @@ let subCond = 0;
 let pos = 0;
 let posF = 40;
 let cond = 0;
+let dotCond = 1;
 
 /* QUANDO UM RADIO É CLICADO A FUNCAO PASSAR POR TODOS PROCURANDO O CHECADO E SETA A CLASSE CORRESPONDENTE */
 function changeTheme() {
@@ -51,47 +49,6 @@ window.addEventListener("load", function() {
 	changeTheme();
 } );
 
-function move1() {
-        if (pos <= 19) {
-            pos = 19; 
-            BSwitch1.style.left = pos + "px";
-        } 
-        if(pos == 19)
-        {
-            BSwitch1.style='visibility: hidden; trasformX: 1000px';
-            BSwitch2.style='visibility: visible;';
-        }
-}
-
-function move2() {
-   
-        if (pos >= 19 && pos <=39) {
-            pos = 39; 
-            BSwitch2.style.left = pos + "px";
-        } 
-        if(pos == 39)
-        {
-            BSwitch2.style='visibility: hidden; trasformX: 1000px';
-            BSwitch3.style='visibility: visible;';
-        }
-   
-}
-
-function move3() {
-    
-        if (pos!= 0) {
-            pos = 0;
-            BSwitch3.style.left = pos + "px";
-        } 
-        if(pos == 0)
-        {
-            BSwitch3.style='visibility: hidden; trasformX: 1000px;';
-            BSwitch1.style='visibility: visible; trasformX: 0px;';
-            BSwitch2.style='visibility: hidden; left: 20px';
-            pos = 0;
-        }
-    
-}
 
 // alert (eval("4+2-5"));
 function equals() {
@@ -115,9 +72,8 @@ function equals() {
 
 
     }else if(operation == "-"){
-        //This part is responsive to menus part
-
         
+        //This part is responsive to menus part
         if(m == 0){
 
             result[1] = parseFloat(result[0]) - parseFloat(numbers);
@@ -167,10 +123,9 @@ function equals() {
             }
         }
     }else{
-        numbers = resul[0];
+        numbers = result[0];
     }
 
-     
     if (conditional == 0) {
         
         conditional = 1;
@@ -193,24 +148,14 @@ function plus() {
 
 function subtract() {
 
-    if(operation != "-" && operation != ""){
-        if(numbers.length <= 0){
-
-            numbers += "-"
+    if(numbers.length == 0){
+        numbers += "-";
+        subCond++;
+    }   else {
+            operation = "-";
+            result[0] = numbers;
+            numbers = "";
         }
-        subCond = 1;
-    }   else if(subCond != 1){
-            if(numbers.length <= 0){
-
-                numbers += "-"
-            }
-            subCond = 1;
-            } else if(subCond = 1){
-                operation = "-";
-                result[0] = numbers;
-                numbers = "";
-            }
-    
     conditional = 0;
     m = 0;
     document.getElementById("receiver").innerHTML = numbers;
@@ -240,18 +185,19 @@ function multiplication() {
 
 // focar nessa parte que falta do ponto com o menos
 function dot() {
-    if(numbers.includes(".") == false){
+    if(numbers == ""){
 
         numbers = "0.";
-    } else if(operation == "-"){
+        
+    }  else if(numbers == "0." ){
 
+          
+        }   else if(numbers != "" && dotCond == 1){
 
-    } else if(numbers != ""){
-
-        numbers = numbers + ".";
-    }
+                numbers = numbers + ".";
+                dotCond--;
+            }
     
-
     document.getElementById("receiver").innerHTML = numbers;
 }
 
@@ -274,6 +220,7 @@ function reset() {
     result[1] = 0;
     conditional= 0;
     subCond = 0;
+    dotCond = 1;
     p = 0;
     m = 0;
     d = 0;
@@ -281,7 +228,7 @@ function reset() {
     document.getElementById("receiver").innerHTML = numbers;
 }
 
-/*Interaction with button's numbers*/
+/* Funções para adicionar os números na tela*/
 function num1() {
 
     if (conditional == 1 && operation != "") {
@@ -300,7 +247,7 @@ function num1() {
     } else if (numbers == 0) {
 
         numbers = numbers.slice(0, numbers.length - 1);
-        if(numbers.length <= 8){
+        if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -313,7 +260,7 @@ function num1() {
         } 
     } else{
         
-         if(numbers.length <= 8){
+         if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -348,7 +295,7 @@ function num2() {
     } else if (numbers == 0) {
 
         numbers = numbers.slice(0, numbers.length - 1);
-        if(numbers.length <= 8){
+        if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -361,7 +308,7 @@ function num2() {
         } 
     } else{
         
-         if(numbers.length <= 8){
+         if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -395,7 +342,7 @@ function num3() {
     } else if (numbers == 0) {
 
         numbers = numbers.slice(0, numbers.length - 1);
-        if(numbers.length <= 8){
+        if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -408,7 +355,7 @@ function num3() {
         } 
     } else{
         
-         if(numbers.length <= 8){
+         if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -443,7 +390,7 @@ function num4() {
     } else if (numbers == 0) {
 
         numbers = numbers.slice(0, numbers.length - 1);
-        if(numbers.length <= 8){
+        if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -456,7 +403,7 @@ function num4() {
         } 
     } else{
         
-         if(numbers.length <= 8){
+         if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -491,7 +438,7 @@ function num5() {
     } else if (numbers == 0) {
 
         numbers = numbers.slice(0, numbers.length - 1);
-        if(numbers.length <= 8){
+        if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -504,7 +451,7 @@ function num5() {
         } 
     } else{
         
-         if(numbers.length <= 8){
+         if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -539,7 +486,7 @@ function num6() {
     } else if (numbers == 0) {
 
         numbers = numbers.slice(0, numbers.length - 1);
-        if(numbers.length <= 8){
+        if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -552,7 +499,7 @@ function num6() {
         } 
     } else{
         
-         if(numbers.length <= 8){
+         if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -587,7 +534,7 @@ function num7() {
     } else if (numbers == 0) {
 
         numbers = numbers.slice(0, numbers.length - 1);
-        if(numbers.length <= 8){
+        if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -600,7 +547,7 @@ function num7() {
         } 
     } else{
         
-         if(numbers.length <= 8){
+         if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -635,7 +582,7 @@ function num8() {
     } else if (numbers == 0) {
 
         numbers = numbers.slice(0, numbers.length - 1);
-        if(numbers.length <= 8){
+        if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -648,7 +595,7 @@ function num8() {
         } 
     } else{
         
-         if(numbers.length <= 8){
+         if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -683,7 +630,7 @@ function num9() {
     } else if (numbers == 0) {
 
         numbers = numbers.slice(0, numbers.length - 1);
-        if(numbers.length <= 8){
+        if(numbers.length <= 10){
 
             if(numbers == ""){
                 
@@ -696,7 +643,7 @@ function num9() {
         } 
     } else{
         
-         if(numbers.length <= 8){
+         if(numbers.length <= 10){
 
             if(numbers == ""){
                 
