@@ -205,6 +205,7 @@ function del() {
 
     numbers = numbers.toString();
     numbers = numbers.slice(0, numbers.length - 1);
+    numbers = numbers;
     if (numbers == 0) {
         reset();
     }
