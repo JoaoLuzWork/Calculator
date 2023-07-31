@@ -356,7 +356,7 @@ body
     { 
         width: 60%;
         margin-top: 0%;
-        margin: 20%;
+        margin-left: 20%;
     }
 }
 
@@ -366,6 +366,6 @@ body
     { 
         width: 80%;
         margin-top: 0%;
-        margin: 10%;
+        margin-left: 10%;
     }
 }
