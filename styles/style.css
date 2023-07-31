@@ -175,9 +175,6 @@ body
 {
     box-sizing: border-box;
     appearance: none;
-  /*   background: white;
-     outline: 1px solid #333;
-    border: 1px solid white; */
     width: 15px;
     height: 15px;
     margin: 7px 3.5px 7px 3.5px;
@@ -366,6 +363,11 @@ body
     { 
         width: 80%;
         margin-top: 0%;
-        margin-left: 10%;
+        margin-left: 5%;
+    }
+    .box_numbers 
+    {
+        
+        gap: 15px;
     }
 }
