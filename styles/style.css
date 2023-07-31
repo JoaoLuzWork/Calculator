@@ -349,3 +349,21 @@ body
     box-shadow: 0 0px;
     transform: translateY(5px);
 }
+
+@media screen and ( max-width: 900px) 
+{
+    .container
+    { 
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+@media screen and ( max-width: 500px) 
+{
+    .container
+    { 
+        width: 80%;
+        margin-left: 10%;
+    }
+}
