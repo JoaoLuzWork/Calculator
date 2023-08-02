@@ -72,6 +72,7 @@ html
 
 body 
 {
+    margin: 0;
     overflow-x: hidden;
     background-color: var(--background);
 }
@@ -148,7 +149,7 @@ body
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin-top: 5%;
+    margin-top: 0%;
     margin-left: 30%;
     border-radius: 20px;
 }
@@ -314,6 +315,7 @@ body
 .button-1 
 {
     display: inline-block;
+    font-size: clamp(0.8rem, 4vw, 2rem);
     background-color: var(--key_background1);
     box-shadow: 0px 5px 0px var(--key_shadow1);
     border: 0ch;
@@ -339,7 +341,7 @@ body
 
 .large_buttons button
 {
-    font-size: xx-large;
+    font-size: clamp(1rem, 4vw, 2rem);
     width: 48%;
     height: 70px;
     border-radius: 10px;
@@ -349,4 +351,9 @@ body
     background-color: var(--key_background2);
     box-shadow: 0 0px;
     transform: translateY(5px);
+}
+
+@media screen and ( max-width: 700px) 
+{
+
 }
