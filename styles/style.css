@@ -66,15 +66,16 @@
 
 html 
 {
-    display: flex;
-    align-items: center;
-
+   
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;;
 }
 
 body 
 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     margin: 0;
     overflow-x: hidden;
     background-color: var(--background);
@@ -149,8 +150,6 @@ body
 /* conteiner principal */
 .container
 {
-    display: flex;
-    flex-direction: column;
     width: 40%;
     border-radius: 20px;
 }
@@ -294,7 +293,7 @@ body
 .button 
 {
     display: inline-block;
-    font-size: clamp(0.8rem, 4vw, 2rem);
+    font-size: clamp(1rem, 8vw, 3rem);
     font-family: 'Tilt Warp', cursive;
     background-color: var(--key_background3);
     color: var(--fontNum);
@@ -316,7 +315,7 @@ body
 .button-1 
 {
     display: inline-block;
-    font-size: clamp(0.8rem, 4vw, 2rem);
+    font-size: clamp(1rem, 4vw, 2rem);
     background-color: var(--key_background1);
     box-shadow: 0px 5px 0px var(--key_shadow1);
     border: 0ch;
@@ -354,7 +353,41 @@ body
     transform: translateY(5px);
 }
 
-@media screen and ( max-width: 900px) 
+@media screen and ( max-width: 850px) 
 {
-    
+    .container
+    {
+        width: 60%;
+    }
+}
+
+@media screen and ( max-width: 600px) 
+{
+    .container
+    {
+        width: 80%;
+    }
+}
+
+@media screen and ( max-width: 450px) 
+{
+    .container
+    {
+        width: 90%;
+    }
+}
+
+@media screen and ( max-width: 375px) 
+{
+    .container
+    {
+        width: 96%;
+        gap: 15px;
+    }
+    .large_buttons button {
+        font-size: clamp(1rem, 4vw, 2rem);
+        width: 48%;
+        height: 70px;
+        border-radius: 10px;
+    }
 }
