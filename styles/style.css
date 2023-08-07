@@ -66,6 +66,9 @@
 
 html 
 {
+    display: flex;
+    align-items: center;
+
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;;
 }
@@ -149,8 +152,6 @@ body
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin-top: 0%;
-    margin-left: 30%;
     border-radius: 20px;
 }
 
@@ -293,7 +294,7 @@ body
 .button 
 {
     display: inline-block;
-    font-size: 40px;
+    font-size: clamp(0.8rem, 4vw, 2rem);
     font-family: 'Tilt Warp', cursive;
     background-color: var(--key_background3);
     color: var(--fontNum);
@@ -353,7 +354,7 @@ body
     transform: translateY(5px);
 }
 
-@media screen and ( max-width: 700px) 
+@media screen and ( max-width: 900px) 
 {
-
+    
 }
