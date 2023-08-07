@@ -248,12 +248,13 @@ body
     border-radius: 10px;
     margin: 0%;
     color: var(--fontHR);
-    font-size: clamp(1rem, 5vw, 4rem);;
+    font-size: clamp(1rem, 5vw, 4rem);
 }
 
 #receiver
 {
    position: relative;
+   font-size: clamp(3rem, 4vw, 8rem);
    top: 20%;
    right: 5%;
    margin: 0px;
